@@ -290,8 +290,8 @@ def create_js(soup, url):
     away = section.find_all(class_="smv__awayParticipant")
     home_data = incident_time("H", home, url)
     away_data = incident_time("A", away, url)
-    h_inc = ["H_G", "H_Y", "H_R"]
-    a_inc = ["A_G", "A_Y", "A_R"]
+    h_inc = ["H_G", "H_Y", "H_R", "H_YR"]
+    a_inc = ["A_G", "A_Y", "A_R", "A_YR"]
 
     for T1, T2 in zip(h_inc, a_inc):
         js.update(add_counter(home_data, T1))
